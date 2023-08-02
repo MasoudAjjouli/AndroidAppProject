@@ -1,0 +1,12 @@
+1 - Create base fragment and place the viewpage inside it
+2 - add the created fragment as root fragment - use navigation component
+3 - sync the tabLayout with viewpager
+
+1- MVVM design pattern - read about this, why not mvc
+2- why we use viewModels
+3- network call and kotlin coroutines
+4- https://retoolapi.dev/JJfCqp/data
+
+5- Bind data using viewmodel
+6- read about hilt
+7- apply hilt to the project

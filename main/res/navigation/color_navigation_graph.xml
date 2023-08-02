@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/color_navigation_graph"
+    app:startDestination="@id/baseFragment">
+
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.myapp.fragments.BaseFragment"
+        android:label="base_fragment"
+        tools:layout="@layout/base_fragment" >
+        <action
+            android:id="@+id/action_baseFragment_to_userDetails"
+            app:destination="@id/userDetails" />
+        <action
+            android:id="@+id/action_baseFragment_to_pictureDetailsFragment"
+            app:destination="@id/pictureDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetails"
+        android:name="com.example.myapp.fragments.UserDetailsFragment"
+        android:label="UserDetails" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.myapp.models.UserInfoElement"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureDetailsFragment"
+        android:name="com.example.myapp.fragments.PictureDetailsFragment"
+        android:label="PictureDetailsFragment" >
+        <argument
+            android:name="currentPicture"
+            app:argType="com.example.myapp.models.PicsList"
+            app:nullable="true" />
+    </fragment>
+</navigation>
